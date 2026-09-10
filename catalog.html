@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Курстар каталогы — AlmaCode Academy</title>
+<meta name="description" content="AlmaCode Academy курстар каталогы: веб-әзірлеу, дизайн, деректерді талдау, маркетинг. Санат және баға бойынша сүзгілеп, керекті курсты табыңыз.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;650;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">Ac</span>AlmaCode</a>
+    <button class="burger icon-btn" id="burger" aria-label="Мәзірді ашу" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Басты бет</a>
+      <a href="about.html">Біз туралы</a>
+      <a href="services.html">Қызметтер</a>
+      <a href="catalog.html">Курстар</a>
+      <a href="contact.html">Байланыс</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" id="headerSearchForm" role="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Курс іздеу…" aria-label="Курс іздеу">
+      </form>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-label">KZ</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button data-lang="kz" role="menuitem">Қазақша</button>
+          <button data-lang="ru" role="menuitem">Русский</button>
+          <button data-lang="en" role="menuitem">English</button>
+        </div>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="Түсті режимді ауыстыру"></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header wrap">
+    <div class="breadcrumb"><a href="index.html">Басты бет</a> / Курстар каталогы</div>
+    <h1>Курстар каталогы</h1>
+    <p class="lead">Өзіңізге сәйкес курсты табыңыз</p>
+  </div>
+
+  <section class="section" style="padding-top:28px;">
+    <div class="wrap catalog-layout">
+      <aside class="filters">
+        <h4>Санат</h4>
+        <div class="filter-group" id="categoryFilters">
+          <label class="filter-check"><input type="checkbox" value="all" checked> Барлығы</label>
+          <label class="filter-check"><input type="checkbox" value="web"> Веб-әзірлеу</label>
+          <label class="filter-check"><input type="checkbox" value="design"> Дизайн</label>
+          <label class="filter-check"><input type="checkbox" value="data"> Деректер</label>
+          <label class="filter-check"><input type="checkbox" value="marketing"> Маркетинг</label>
+          <label class="filter-check"><input type="checkbox" value="business"> Бизнес</label>
+        </div>
+        <h4>Баға</h4>
+        <div class="filter-group">
+          <div class="range-wrap">
+            <input type="range" id="priceRange" min="20000" max="45000" step="1000" value="45000" aria-label="Максималды баға">
+            <div class="range-values"><span>0 ₸</span><span id="priceRangeLabel">45 000 ₸</span></div>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-block" id="resetFilters">Сүзгіні тазарту</button>
+      </aside>
+
+      <div>
+        <div class="catalog-toolbar">
+          <span id="resultsCount" style="color:var(--ink-soft);font-size:.92rem;"></span>
+          <select id="sortSelect" aria-label="Сұрыптау">
+            <option value="popular">Танымал</option>
+            <option value="price-asc">Баға: төменнен жоғарыға</option>
+            <option value="price-desc">Баға: жоғарыдан төменге</option>
+            <option value="rating">Рейтинг бойынша</option>
+          </select>
+        </div>
+        <div class="grid grid-3" id="catalogGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+          Сұранысыңызға сәйкес курс табылмады. Сүзгіні өзгертіп көріңіз.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="color:#fff;margin-bottom:10px;display:inline-flex;"><span class="mark">Ac</span>AlmaCode</a>
+        <p style="color:#B7BBAA;font-size:.9rem;max-width:32ch;">Білім — жарқын болашақтың негізі. Онлайн курстар арқылы жаңа мамандық игеріңіз.</p>
+      </div>
+      <div>
+        <h4>Бөлімдер</h4>
+        <ul><li><a href="index.html">Басты бет</a></li><li><a href="about.html">Біз туралы</a></li><li><a href="services.html">Қызметтер</a></li><li><a href="catalog.html">Курстар</a></li></ul>
+      </div>
+      <div>
+        <h4>Пайдалы</h4>
+        <ul><li><a href="contact.html">Байланыс</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="404.html">Құпиялылық саясаты</a></li></ul>
+      </div>
+      <div>
+        <h4>Байланыс</h4>
+        <ul><li>+7 700 123 45 67</li><li>info@almacode.kz</li><li>Алматы, Қазақстан</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 AlmaCode Academy. Барлық құқықтар қорғалған.</span></div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

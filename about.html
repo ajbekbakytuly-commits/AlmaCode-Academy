@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Біз туралы — AlmaCode Academy</title>
+<meta name="description" content="AlmaCode Academy миссиясы, командасы және оқыту тәсілі туралы білу.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;650;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">Ac</span>AlmaCode</a>
+    <button class="burger icon-btn" id="burger" aria-label="Мәзірді ашу" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Басты бет</a>
+      <a href="about.html">Біз туралы</a>
+      <a href="services.html">Қызметтер</a>
+      <a href="catalog.html">Курстар</a>
+      <a href="contact.html">Байланыс</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" id="headerSearchForm" role="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Курс іздеу…" aria-label="Курс іздеу">
+      </form>
+      <div class="lang-dropdown">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-label">KZ</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button data-lang="kz" role="menuitem">Қазақша</button>
+          <button data-lang="ru" role="menuitem">Русский</button>
+          <button data-lang="en" role="menuitem">English</button>
+        </div>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="Түсті режимді ауыстыру"></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header wrap">
+    <div class="breadcrumb"><a href="index.html">Басты бет</a> / Біз туралы</div>
+    <h1>Біз білім берудің жаңа форматын құрамыз</h1>
+    <p class="lead" style="max-width:60ch;">AlmaCode Academy 2021 жылы Алматыда негізі қаланған онлайн IT-академия. Мақсатымыз — кез келген адамға сапалы, тәжірибеге негізделген техникалық білімді қолжетімді ету.</p>
+  </div>
+
+  <section class="section">
+    <div class="wrap grid grid-2" style="align-items:center;gap:48px;">
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80" alt="Кеңседе бірге жұмыс істеп отырған AlmaCode командасы" style="border-radius:16px;">
+      <div>
+        <p class="eyebrow">Біздің миссия</p>
+        <h2>Теория емес, нақты дағды</h2>
+        <p>Біз әр курсты нақты жұмыс орнындағы міндеттерге негіздеп құрамыз: студенттер тапсырма орындап қана қоймай, портфолиоға қосуға болатын жоба шығарады.</p>
+        <p>Курс бағдарламаларын саланың белсенді мамандары жасайды және жыл сайын жаңартып отырады, сондықтан білім әрдайым өзекті болып қалады.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Құндылықтар</p>
+        <h2>Бізді ерекшелейтін нәрсе</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="service-card">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
+          <h3>Ашықтық</h3>
+          <p>Курс бағдарламасы, бағасы және нәтижесі туралы толық ақпарат бересіз алдын ала беріледі.</p>
+        </div>
+        <div class="service-card">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Сапа</h3>
+          <p>Әр оқытушы тестілеуден өтіп, тек тәжірибесі бар мамандар ғана сабақ береді.</p>
+        </div>
+        <div class="service-card">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></div>
+          <h3>Қауымдастық</h3>
+          <p>Студенттер бір-бірімен және түлектермен байланыста болады, тәжірибе алмасады.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Жиі қойылатын сұрақтар</p>
+        <h2>Сұрағыңыз бар ма?</h2>
+      </div>
+      <div style="max-width:720px;">
+        <div class="accordion-item">
+          <button class="accordion-trigger">Курстарға қалай тіркелемін?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">Каталог бетінен қажетті курсты таңдап, «Қазір сатып алу» батырмасын басыңыз немесе байланыс формасы арқылы өтініш қалдырыңыз.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Оқу форматы қандай?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">Барлық сабақтар онлайн өтеді: жазылған видео дәрістер, тірі сессиялар және практикалық тапсырмалар.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Сертификат бере ме?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">Иә, курсты сәтті аяқтаған әр студентке электронды және басылған сертификат беріледі.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="color:#fff;margin-bottom:10px;display:inline-flex;"><span class="mark">Ac</span>AlmaCode</a>
+        <p style="color:#B7BBAA;font-size:.9rem;max-width:32ch;">Білім — жарқын болашақтың негізі. Онлайн курстар арқылы жаңа мамандық игеріңіз.</p>
+      </div>
+      <div>
+        <h4>Бөлімдер</h4>
+        <ul><li><a href="index.html">Басты бет</a></li><li><a href="about.html">Біз туралы</a></li><li><a href="services.html">Қызметтер</a></li><li><a href="catalog.html">Курстар</a></li></ul>
+      </div>
+      <div>
+        <h4>Пайдалы</h4>
+        <ul><li><a href="contact.html">Байланыс</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="404.html">Құпиялылық саясаты</a></li></ul>
+      </div>
+      <div>
+        <h4>Байланыс</h4>
+        <ul><li>+7 700 123 45 67</li><li>info@almacode.kz</li><li>Алматы, Қазақстан</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AlmaCode Academy. Барлық құқықтар қорғалған.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
